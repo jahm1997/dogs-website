@@ -1,0 +1,35 @@
+
+.filters{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+    width: 740px;
+    display: inline-flex;
+    margin-top: 30px;
+    margin-left: 70px;
+    /* border: 2px solid white */
+
+    
+}
+
+.filters select, button{
+    border: 3px solid white;
+    padding: 6px 14px;
+    /* margin-left: 10px; */
+    border-radius: 10px;
+    font-size: 0.8rem;
+    text-align: start;
+
+} 
+.filters input{
+    border: 3px solid blue;
+    padding: 6px 14px;
+    /* margin-left: 10px; */
+    border-radius: 10px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.espaciado{
+    margin-left: 15px;
+}

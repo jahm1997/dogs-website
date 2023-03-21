@@ -1,0 +1,44 @@
+.divImagen{
+    background-image: url("../imagenes/bienvenido.jpeg") ;
+    /* height: 781px; seria en imagen grande */
+    height: 1000px;
+    /* background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+
+}
+
+.divBoton{
+    border-radius: 50%;
+    top: 16.5rem;
+    left:38rem;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    width: 200px;
+    
+}
+
+.img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+
+.divBoton:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 2px 100px rgb(4, 40, 117);
+    transition: all 0.2s ease;
+}
+
+/* .imgBoton{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    width: 40%;
+}  */
+
+

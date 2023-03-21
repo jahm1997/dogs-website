@@ -1,0 +1,39 @@
+.container{
+    /* background-image: url("../../prueba3.jpeg"); */
+    position: block;
+    border: 5px solid;
+    /* border-color: #e0b455; */
+    border-color: blue;
+    background-color: rgb(125, 177, 255);
+    text-align: center;
+    width: 270px;
+    border-radius: 5%;
+    
+    height: 23rem;
+    line-height: 120%;
+    font-style: none;
+    color: black;
+}
+.container:hover{
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
+}
+
+.container h3{
+    margin: 0.5rem;
+}
+
+.container h4{
+    margin: 0.5rem;
+}
+
+.imagen{   
+    width: 230px;
+    height: 172px;
+    border-radius: 5%;
+}
+
+

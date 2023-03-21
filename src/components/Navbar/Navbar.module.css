@@ -1,0 +1,72 @@
+.menu{
+    height: 90px; 
+    width: 100%;
+    background-image: url("../imagenes/nav_Joseph.png");
+    /* border: 10px solid pink; */
+    display:inline-flex;
+    border-bottom: 1px solid white;
+
+}
+
+.logo a img{
+    /* position:absolute; */
+
+    width: 130px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* border: 2px solid red; */
+
+}
+
+.homePage a img {
+    width: 105px;
+    margin-left: 100px;
+    border-radius: 15px;
+    margin-top: 10px;
+    /* border: 2px solid white; */
+}
+
+.crearDog a img {
+    width: 114px;
+    margin-left: 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    /* border: 2px solid white; */
+}
+
+
+.menu h1{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+    width: 600px;
+    display: inline-flex;
+    justify-content:center;
+    margin-left: 180px;
+    color: white;
+    /* border: 2px solid white */
+
+    
+}
+
+.menu .h1{
+    border: 3px solid blue;
+    padding: 6px 8px;
+    /* margin-left: 10px; */
+    border-radius: 10px;
+    font-size: 0.8rem;
+    text-align: center;
+
+} 
+
+
+
+
+
+
+
+
+
+
+

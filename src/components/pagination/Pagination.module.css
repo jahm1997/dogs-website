@@ -1,0 +1,103 @@
+.list{
+    display:inline-flex;
+    justify-content: center;
+    align-items:center;
+    height: 50px;
+}
+
+.list ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height:0
+    
+    
+}
+
+.list ul li{
+    display:inline-flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.list ul li p{
+    font-weight: 500;
+    margin: 2px;
+    padding: 5px;
+    width: auto;
+    font-family: fantasy ;
+    /* background-image: url("../imagenes/botonhuesitos.png"); */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    
+    .list ul li p:hover {
+        animation: botonRegistrar infinite 1s alternate;
+        background-color: blue;
+        color: white;
+
+        border-radius: 50%;
+        border: 0.5px solid;
+        margin: 5px;
+        padding: 5px;
+        -webkit-transform:scale(1.3);
+        -moz-transform:scale(1.3);
+        -ms-transform:scale(1.3);
+        -o-transform:scale(1.3);
+        transform:scale(1.3);    
+}   }
+
+
+
+.listToImagenUno {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 50px;
+    
+}
+
+.listToImagenUno img{
+    position: absolute;
+    width: 100px;
+    /* border: 2px solid red; */
+    top: 1000px;
+    left: 550px;
+
+}
+
+.listToImagenUno img:hover{
+    margin: 5px;
+    padding: 5px;
+    -webkit-transform:scale(1.3);
+    -moz-transform:scale(1.3);
+    -ms-transform:scale(1.3);
+    -o-transform:scale(1.3);
+    transform:scale(1.3); 
+
+}
+
+.listToImagenDos {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 80px;
+    
+}
+
+.listToImagenDos img{
+    position: absolute;
+    width: 100px;
+    /* border: 2px solid red; */
+    top: 1000px;
+    right: 550px;
+}
+
+.listToImagenDos img:Hover{
+    margin: 5px;
+    padding: 5px;
+    -webkit-transform:scale(1.3);
+    -moz-transform:scale(1.3);
+    -ms-transform:scale(1.3);
+    -o-transform:scale(1.3);
+    transform:scale(1.3); 
+}
