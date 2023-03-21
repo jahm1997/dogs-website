@@ -36,7 +36,9 @@ export const getDog = (id) => async (dispatch) => {
 
 export const getAllTemps = () => async (dispatch) => {
   try {
-    const response = await axios.get("https://dogbackend.onrender.com/dogs");
+    const response = await axios.get(
+      "https://dogbackend.onrender.com/temperaments"
+    );
     const temps = response.data;
     return dispatch({ type: GET_TEMPS, payload: temps });
   } catch (error) {
