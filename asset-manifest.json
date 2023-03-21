@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/dogs-website/static/css/main.9ea45d71.css",
+    "main.js": "/dogs-website/static/js/main.3877ec42.js",
+    "static/js/787.0242d986.chunk.js": "/dogs-website/static/js/787.0242d986.chunk.js",
+    "static/media/videoPerritos.mp4": "/dogs-website/static/media/videoPerritos.618b23076de7a6e8aa3a.mp4",
+    "static/media/bienvenido.jpeg": "/dogs-website/static/media/bienvenido.26192371502462a1f4b0.jpeg",
+    "static/media/botonDerecha.png": "/dogs-website/static/media/botonDerecha.6b67439ff122cdf315cd.png",
+    "static/media/botonIzquierda.png": "/dogs-website/static/media/botonIzquierda.c17d996af2b6b12280d1.png",
+    "static/media/nav_Joseph.png": "/dogs-website/static/media/nav_Joseph.4160b277d36636efaed1.png",
+    "static/media/prueba3.jpeg": "/dogs-website/static/media/prueba3.c33217b595c9c5bf0af5.jpeg",
+    "static/media/botonNuevoPerro.png": "/dogs-website/static/media/botonNuevoPerro.99b6d03a8e1d0e7e8ce4.png",
+    "static/media/logoTipo_dogs_modified.png": "/dogs-website/static/media/logoTipo_dogs_modified.f0b48129672bc3aa81cb.png",
+    "static/media/homePage.jpg": "/dogs-website/static/media/homePage.8f279cdfa71fc8c7731e.jpg",
+    "static/media/createDog.jpg": "/dogs-website/static/media/createDog.6eb47a976fbacd6a3042.jpg",
+    "static/media/cargando2.jpg": "/dogs-website/static/media/cargando2.6eb83ec588dc6a1fcc9c.jpg",
+    "static/media/BotonPerrito.jpeg": "/dogs-website/static/media/BotonPerrito.b25d5cd9fb3f51249466.jpeg",
+    "index.html": "/dogs-website/index.html",
+    "main.9ea45d71.css.map": "/dogs-website/static/css/main.9ea45d71.css.map",
+    "main.3877ec42.js.map": "/dogs-website/static/js/main.3877ec42.js.map",
+    "787.0242d986.chunk.js.map": "/dogs-website/static/js/787.0242d986.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ea45d71.css",
+    "static/js/main.3877ec42.js"
+  ]
+}
