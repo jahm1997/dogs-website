@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className={style.menu} >
           <div className={style.logo} >
-              <Link to ={"/dogs-website/"}>
+              <Link to ={"/dogs"}>
                 <img src={logoTipo} alt={logoTipo} />  
               </Link>
           </div>
