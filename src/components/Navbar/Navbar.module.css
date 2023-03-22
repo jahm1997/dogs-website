@@ -8,7 +8,7 @@
 
 }
 
-.logo a img{
+.logo img{
     /* position:absolute; */
 
     width: 130px;
@@ -19,7 +19,7 @@
 
 }
 
-.homePage a img {
+.homePage img {
     width: 105px;
     margin-left: 100px;
     border-radius: 15px;
@@ -27,7 +27,7 @@
     /* border: 2px solid white; */
 }
 
-.crearDog a img {
+.crearDog img {
     width: 114px;
     margin-left: 20px;
     border-radius: 15px;
