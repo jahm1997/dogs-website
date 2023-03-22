@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className={style.menu} >
           <div className={style.logo} >
-              <Link to ="/dogs-website/">
+              <Link to ={"/dogs-website/"}>
                 <img src={logoTipo} alt={logoTipo} />  
               </Link>
           </div>
@@ -20,13 +20,13 @@ const Navbar = () => {
           
           
           <div className={style.homePage} >
-              <Link to="/dogs">
+              <Link to={"/dogs"}>
                 <img src={homePage} alt={homePage} />
               </Link>
           </div>
 
           <div className={style.crearDog} >
-              <Link to="/dogs/add">
+              <Link to={"/dogs/add"}>
                 <img src={CrearDog} alt={CrearDog} />
               </Link>
               {/* <Link to="/dogs/add">Create Dog</Link> */}
