@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dogs-website/static/css/main.b0faf514.css",
-    "main.js": "/dogs-website/static/js/main.c3cd9028.js",
+    "main.js": "/dogs-website/static/js/main.5cb07a3e.js",
     "static/js/787.0242d986.chunk.js": "/dogs-website/static/js/787.0242d986.chunk.js",
     "static/media/videoPerritos.mp4": "/dogs-website/static/media/videoPerritos.618b23076de7a6e8aa3a.mp4",
     "static/media/bienvenido.jpeg": "/dogs-website/static/media/bienvenido.26192371502462a1f4b0.jpeg",
@@ -17,11 +17,11 @@
     "static/media/BotonPerrito.jpeg": "/dogs-website/static/media/BotonPerrito.b25d5cd9fb3f51249466.jpeg",
     "index.html": "/dogs-website/index.html",
     "main.b0faf514.css.map": "/dogs-website/static/css/main.b0faf514.css.map",
-    "main.c3cd9028.js.map": "/dogs-website/static/js/main.c3cd9028.js.map",
+    "main.5cb07a3e.js.map": "/dogs-website/static/js/main.5cb07a3e.js.map",
     "787.0242d986.chunk.js.map": "/dogs-website/static/js/787.0242d986.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b0faf514.css",
-    "static/js/main.c3cd9028.js"
+    "static/js/main.5cb07a3e.js"
   ]
 }
