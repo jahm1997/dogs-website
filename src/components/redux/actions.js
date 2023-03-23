@@ -11,7 +11,9 @@ export const ERROR = "error";
 
 export const getAllDogs = () => async (dispatch) => {
   try {
-    const response = await axios.get("https://dogbackend.onrender.com/dogs");
+    const response = await axios.get(
+      "https://api-production-8578.up.railway.app/dogs"
+    );
     const dogs = response.data;
     return dispatch({ type: GET_ALL_DOGS, payload: dogs });
   } catch (error) {
@@ -20,13 +22,16 @@ export const getAllDogs = () => async (dispatch) => {
 };
 
 export const postdog = async (objeto) => {
-  return await axios.post("https://dogbackend.onrender.com/dogs/add", objeto);
+  return await axios.post(
+    "https://api-production-8578.up.railway.app/dogs/add",
+    objeto
+  );
 };
 
 export const getDog = (id) => async (dispatch) => {
   try {
     const response = await axios.get(
-      `https://dogbackend.onrender.com/dogs/${id}`
+      `https://api-production-8578.up.railway.app/dogs/${id}`
     );
     return dispatch({ type: GET_DOG, payload: response.data });
   } catch (error) {
@@ -37,7 +42,7 @@ export const getDog = (id) => async (dispatch) => {
 export const getAllTemps = () => async (dispatch) => {
   try {
     const response = await axios.get(
-      "https://dogbackend.onrender.com/temperaments"
+      "https://api-production-8578.up.railway.app/temperaments"
     );
     const temps = response.data;
     return dispatch({ type: GET_TEMPS, payload: temps });
@@ -47,7 +52,9 @@ export const getAllTemps = () => async (dispatch) => {
 };
 
 export const filterCards = (valor, propiedad) => async (dispatch) => {
-  const response = await axios.get(`https://dogbackend.onrender.com/dogs`);
+  const response = await axios.get(
+    `https://api-production-8578.up.railway.app/dogs`
+  );
   const perros = response.data;
   try {
     if (valor !== "") {
