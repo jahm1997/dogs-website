@@ -1,63 +1,69 @@
-.contenedor{
+.contenedor {
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: 80px auto ;
-    grid-template-rows: 100px 52rem 3rem 3rem;
-    background-image: url("../imagenes/prueba3.jpeg");
-    height: 115%;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cartas {
+    grid-column: 1 / -1; /* Ocupa todo el ancho si el sidebar no está fijo a la izq */
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
     width: 100%;
-    /* border:3px solid red */
+    box-sizing: border-box;
 }
 
-.menu{
-  grid-column: 1/4;
-  grid-row: 1/2;
+.pagi {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: white;
 }
 
-.cartas{
-  /* background-image: url("../../prueba3.jpeg"); */
-  grid-column: 2/3;
-  grid-row: 2/4;
-  /* position:fixed; */
-  padding-top: 2%;
-  width: 1200px;
-  display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  grid-template-rows: 25rem 25rem;
-  /* padding-left: 4%; */
-}
-
-.pagi{
-  grid-row: 3/5;
-  grid-column: 1/3;
-
-  text-align: center;
-  font-size:15px;
-  height: 5px;
-
-}
-
-.cargandoDiv{
-  text-align: center;
-  padding-top: 200px;
-     background-color: white;
+.cargandoDiv {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
 }
 
 .cargando {
-    height: 20vmin;
-    pointer-events: none;
-  }
-
-@media (prefers-reduced-motion: no-preference) {
-  .cargando {
-    animation: cargando infinite 1s linear;
-  }
+    width: 100px;
+    height: 100px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
-  
-@keyframes cargando {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .cartas {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 1rem;
+    }
 }

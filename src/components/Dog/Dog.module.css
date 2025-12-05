@@ -1,100 +1,159 @@
-.contenedorGeneral{
-    box-sizing: border-box;
-    height: 1000px;
-    background-image: url("../imagenes/prueba3.jpeg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;    
-
-    display:grid;
-    grid-template-columns: 900px auto;
-    grid-template-rows: 90px auto;
-    
+.pageWrapper {
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.menu{
-    grid-column: 1/3;
-    grid-row: 1/2;
-
-    margin-top: 20px;
-    padding: 0;
-    box-sizing: border-box;
-    /* border: 5px solid red; */
-    height: 70px;
-}
-
-.imagen{
-  width: 450px;
-  height: 380px;
-  border: 2px solid blue;
-}
-
-.containerImg{
-    grid-row: 2/3;
-    grid-column: 1/2;
-    
+.contentContainer {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    top: 50px;
-    left: 120px;
-
-    /* border: 5px solid blue;     */
+    padding: 2rem;
+    min-height: calc(100vh - 80px); /* Restar altura del navbar */
 }
 
-.containerImg div{
-    margin-left: 250px;
-    margin-top:70px
+.card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+    min-height: 500px;
 }
 
-.container{
-    grid-column: 2/3;
-    grid-row: 2/3;
-
-    /* border: 5px solid black */
-    /* border: 5px solid blue; */
-    position: absolute;
-    top: 25%;
-    left: 55%;
-    transform: translate(-50%, -50%);
+.imageSection {
+    flex: 1;
+    background-color: #e2e8f0;
+    position: relative;
+    min-height: 300px;
 }
 
-.containerInt{
-  background-color:cornflowerblue;
-    width: 290px;
-    height: 350px;
-    position: absolute;
-    padding: 20px 150px 10px 60px;
-    border: 2px solid white;
-    border-radius: 10px;
+.dogImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.infoSection {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.statGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7fafc;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.statLabel {
+    font-size: 0.85rem;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.statValue {
+    font-size: 1.1rem;
+    color: #2d3748;
+    font-weight: 700;
+}
+
+.temperamentSection h3 {
     font-size: 1.2rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #4a5568;
+    margin-bottom: 1rem;
 }
 
-
-.cargandoDiv{
-    text-align: center;
-    padding-top: 200px;
-    background-color: white;
-  }
-  
-.cargando {
-    height: 20vmin;
-    pointer-events: none;
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .cargando {
-      animation: cargando infinite 1s linear;
+.tag {
+    background-color: #ebf8ff;
+    color: #3182ce;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.noTemp {
+    color: #a0aec0;
+    font-style: italic;
+}
+
+.loadingContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #e2e8f0;
+    border-top: 5px solid #3182ce;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        height: auto;
     }
-  }
-    
-  @keyframes cargando {
-    from {
-      transform: rotate(0deg);
+
+    .imageSection {
+        height: 300px;
     }
-    to {
-      transform: rotate(360deg);
+
+    .infoSection {
+        padding: 2rem;
     }
-  }
+
+    .title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .statGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

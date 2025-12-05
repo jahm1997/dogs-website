@@ -1,35 +1,124 @@
-
-.filters{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    text-align: center;
-    width: 740px;
-    display: inline-flex;
-    margin-top: 30px;
-    margin-left: 70px;
-    /* border: 2px solid white */
-
-    
+.filterContainer {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+    max-width: 1200px;
+    width: 95%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.filters select, button{
-    border: 3px solid white;
-    padding: 6px 14px;
-    /* margin-left: 10px; */
-    border-radius: 10px;
-    font-size: 0.8rem;
-    text-align: start;
-
-} 
-.filters input{
-    border: 3px solid blue;
-    padding: 6px 14px;
-    /* margin-left: 10px; */
-    border-radius: 10px;
-    font-size: 0.8rem;
-    text-align: center;
+.filterGroup, .searchGroup {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.espaciado{
-    margin-left: 15px;
+.selectInput {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    color: #4a5568;
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    min-width: 140px;
+}
+
+.selectInput:hover {
+    border-color: #cbd5e0;
+    background-color: #fff;
+}
+
+.selectInput:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.textInput {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s;
+    min-width: 200px;
+}
+
+.textInput:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+.actionButton, .resetButton {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.actionButton {
+    background-color: #3182ce;
+    color: white;
+}
+
+.actionButton:hover:not(:disabled) {
+    background-color: #2c5282;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(49, 130, 206, 0.25);
+}
+
+.actionButton:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.resetButton {
+    background-color: #edf2f7;
+    color: #4a5568;
+}
+
+.resetButton:hover {
+    background-color: #e2e8f0;
+    color: #2d3748;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .filterContainer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .filterGroup, .searchGroup {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .selectInput, .textInput, .actionButton, .resetButton {
+        width: 100%;
+    }
 }

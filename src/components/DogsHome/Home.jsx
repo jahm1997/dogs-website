@@ -74,7 +74,14 @@ function Home() {
         </div>
 
         <div className={styled.pagi} >
-          <Pagination perrosEnPantalla={perrosEnPantalla} totalPerros = {myDogs.length} delante = {delante} atras = {atras} paginate = {paginate} />
+          <Pagination 
+            perrosEnPantalla={perrosEnPantalla} 
+            totalPerros={myDogs.length} 
+            delante={delante} 
+            atras={atras} 
+            paginate={paginate}
+            currentPage={inicio} 
+          />
         </div>
       </div>
     )

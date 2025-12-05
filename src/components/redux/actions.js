@@ -11,9 +11,8 @@ export const ERROR = "error";
 
 export const getAllDogs = () => async (dispatch) => {
   try {
-    const response = await axios.get(
-      "https://api-production-8578.up.railway.app/dogs"
-    );
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
+    const response = await axios.get(`${apiUrl}/dogs`);
     const dogs = response.data;
     return dispatch({ type: GET_ALL_DOGS, payload: dogs });
   } catch (error) {
@@ -22,16 +21,18 @@ export const getAllDogs = () => async (dispatch) => {
 };
 
 export const postdog = async (objeto) => {
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
   return await axios.post(
-    "https://api-production-8578.up.railway.app/dogs/add",
+    `${apiUrl}/dogs/add`,
     objeto
   );
 };
 
 export const getDog = (id) => async (dispatch) => {
   try {
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
     const response = await axios.get(
-      `https://api-production-8578.up.railway.app/dogs/${id}`
+      `${apiUrl}/dogs/${id}`
     );
     return dispatch({ type: GET_DOG, payload: response.data });
   } catch (error) {
@@ -41,8 +42,9 @@ export const getDog = (id) => async (dispatch) => {
 
 export const getAllTemps = () => async (dispatch) => {
   try {
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
     const response = await axios.get(
-      "https://api-production-8578.up.railway.app/temperaments"
+      `${apiUrl}/temperaments`
     );
     const temps = response.data;
     return dispatch({ type: GET_TEMPS, payload: temps });
@@ -52,8 +54,9 @@ export const getAllTemps = () => async (dispatch) => {
 };
 
 export const filterCards = (valor, propiedad) => async (dispatch) => {
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
   const response = await axios.get(
-    `https://api-production-8578.up.railway.app/dogs`
+    `${apiUrl}/dogs`
   );
   const perros = response.data;
   try {

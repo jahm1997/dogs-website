@@ -1,78 +1,77 @@
 import React from "react"
 import style from "./Filter.module.css";
-
 import { useDispatch } from "react-redux";
-
 import { filterCards, orderCards, getAllDogs } from "../redux/actions"
 
 function Filter() {
-
   const dispatch = useDispatch()
-
-  const [propiedad,setPropiedad] = React.useState("")
-  const [valor,setValor] = React.useState("")
-  // const [boton,setBoton] = React.useState(false)
+  const [propiedad, setPropiedad] = React.useState("")
+  const [valor, setValor] = React.useState("")
 
   const handleOrder = (e) => {
-    // if(e.target.value === "maxpeso" || e.target.value === "minpeso"){
-    //   setBoton(true)
-    // }
-    
     dispatch(orderCards(e.target.value))
-    
   }
- 
 
   const handleFilter = (evento) => {
-    setPropiedad(evento.target.value)
+    const newPropiedad = evento.target.value
+    setPropiedad(newPropiedad)
+    if (valor) {
+      dispatch(filterCards(valor, newPropiedad))
+    }
   }
 
   const handleChange = (e) => {
-    setValor(e.target.value)
+    const newValor = e.target.value
+    setValor(newValor)
+    if (propiedad) {
+      dispatch(filterCards(newValor, propiedad))
+    }
   }
 
-  
-  const enviar = () =>{
-
-    dispatch(filterCards(valor,propiedad))
-    setValor("")
-  }
-
-  const limpiar = () =>{
+  const limpiar = () => {
     dispatch(getAllDogs())
+    setValor("")
+    setPropiedad("")
   }
-  
+
   return (
-          <div className={style.filters} >
-            <div >
-              <select className={style.espaciado} onChange={handleOrder}>
-                <option value="default"  >Default</option>
-                <option value="" disabled >--Alfabetico--</option>
-                <option value="ascendente">A to Z</option>
-                <option value="descendente">Z to A</option>
-                <option value="" disabled>--By weight--</option>
-                <option value="maxpeso">max Weight</option>
-                {/* {boton && <option value="maximo" >funciona</option>}
-                {boton && <option value="maximo" >funciona</option>} */}
-                <option value="minpeso">Min Weight</option>
-              </select>
-              <select className={style.espaciado} onChange={handleFilter}>
-                <option value=""  >Busqueda Por</option>
-                <option value="name">Raza</option>
-                <option value="weight">Peso</option>
-                <option value="height">Estatura</option>
-                <option value="life_span">Años de vida</option>
-                <option value="temperament">temperamentos</option>
-              </select  >
-            </div>
-            <div>
-              <input className={style.espaciado} type="text" name="nombre" placeholder="Buscar... " onChange= {handleChange} value={valor}/>
-            </div>
-            <div>
-              <button className={style.espaciado} onClick={enviar} >Buscar</button>
-              <button className={style.espaciado} onClick={limpiar} >Limpiar Filtro</button>
-            </div>
-        </div>)
+    <div className={style.filterContainer}>
+      <div className={style.filterGroup}>
+        <select className={style.selectInput} onChange={handleOrder} defaultValue="default">
+          <option value="default" disabled>Sort By</option>
+          <option value="ascendente">A to Z</option>
+          <option value="descendente">Z to A</option>
+          <option value="maxpeso">Heaviest First</option>
+          <option value="minpeso">Lightest First</option>
+        </select>
+      </div>
+
+      <div className={style.searchGroup}>
+        <select className={style.selectInput} onChange={handleFilter} value={propiedad}>
+          <option value="" disabled>Search By...</option>
+          <option value="name">Breed Name</option>
+          <option value="weight">Weight</option>
+          <option value="height">Height</option>
+          <option value="life_span">Life Span</option>
+          <option value="temperament">Temperament</option>
+        </select>
+
+        <div className={style.inputWrapper}>
+            <input 
+                className={style.textInput} 
+                type="text" 
+                placeholder="Type here..." 
+                onChange={handleChange} 
+                value={valor}
+            />
+        </div>
+        
+        <button className={style.resetButton} onClick={limpiar}>
+            🔄 Reset
+        </button>
+      </div>
+    </div>
+  )
 }
 
 export default Filter

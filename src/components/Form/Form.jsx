@@ -111,7 +111,7 @@ const Form = () => {
    
     postdog(dog)
     alert("haz creado una nueva raza! :D")
-    traslado(`/dogs/${myDogs[myDogs.length-1].id+1}`)
+    traslado(`/dogs-website/${myDogs[myDogs.length-1].id+1}`)
   
   }
   
